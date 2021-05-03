@@ -20,6 +20,7 @@ input[type="button"]{
 h1,h2,h3,h4,h5,h6{
 	padding:0 0;
 	margin:0 0;
+	
 }
 p{
 	padding:0 0;
@@ -33,7 +34,6 @@ body{
 	padding:0 0;
 	margin:0 0; 
 	font-family: 'Open Sans', sans-serif;
-	
 	
 }
 .header{
@@ -628,26 +628,6 @@ h2.resp-accordion {
 }
 .about-header {
 	text-align: center;
-}
-.about-header h3 {
-	font-size: 2.5em;
-	font-family: 'Arvo', serif;
-	text-transform: uppercase;
-	font-weight: 400;
-	color: #2a404e;
-}
-.about-header h3 span {
-	color: #ef664d;;
-
-}
-.about-imag {
-	float: left;
-	width:27%;
-	margin-right:5%
-}
-.about-imag img {
-	border: 2px solid #ef664d;
-	border-radius: 103px;
 }
 .about-text {
 	float: left;
