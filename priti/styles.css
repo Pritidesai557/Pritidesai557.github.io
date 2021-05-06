@@ -1,0 +1,339 @@
+*{
+    margin-top: 0px!important;
+}
+html{
+    font-size: 62.5%;
+    margin-top:5%;
+}
+body{
+    background:#000;
+    /* overflow:hidden; */
+    margin-top: 0%!important;
+}
+nav li{
+    font-size: 1.6rem!important;
+}
+.logo img{
+    width: 200px;
+  border-radius: 15px;
+}
+
+h2{
+    color:white!important;
+    justify-content:center;
+    margin:auto;
+    align-items:center;
+}
+h4{
+    color:white!important;
+   
+}
+.percentage p{
+        color:white!important;
+
+}
+.container{
+    margin-top: 5%!important;
+
+}
+/* **********edu********* */
+.container .row{
+    color: #07fad9!important;
+  font-size: 1.6rem;
+}
+.card{
+    transition: 0.4s ease;
+   background: black;
+    margin: 40px;
+}
+.card-body{
+    padding: 1.5rem!important;
+   
+}
+.card-body li{
+    margin: 10px 0;
+    font-weight: 400;
+    line-height: 1.6;
+    list-style: none;
+    }
+.card-header{
+    font-size: 2rem;
+    font-weight: bold;
+    background: rgb(211, 195, 206)!important;
+    padding: 10px 9!important;
+    }
+  .card-footer{
+        background:  rgb(211, 195, 206)!important;
+        padding: 10px 0px!important;
+    }
+    .card-footer a{
+        border: 1px solid #5059d1!important;
+        border-radius: 100px;
+        margin: 0 5px;
+        padding: 12px 35px;
+        outline: none;
+        color: rgb(127, 127, 197)!important;
+        font-size: 1.1rem;
+        font-weight: 400px;
+        line-height: 1.4;
+    }
+ .card-footer a:hover{
+        color: white!important;
+        background: rgb(115, 209, 247)!important;
+        text-decoration: none;
+        box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);
+    
+    }    
+.card:hover{
+    transform: translateY(-20px);
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3)!important;
+}
+.card:hover .card-header, .card:hover .money{
+    color: #080808!important;
+}
+.card-second{ 
+    transform: translateY(-20px);
+    /* box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3); */
+}
+.arrow1{
+  
+    margin-top: 47rem!important;
+}
+/* **********edu********* */
+.works-section{
+    height:100vh!important;
+    
+
+}
+.works-header h2{
+    margin-top: 1rem!important;
+    font-size: 2.5rem;
+  
+}
+.content{
+    height:100vh!important;
+    width:fit-content;
+    justify-content:center;
+    margin:auto;
+    /* border:2px solid red; */
+ 
+}
+
+.content .container{
+        /* border:2px solid red; */
+       /* margin-bottom:10px; */
+           height:100vh!important;
+    width:fit-content;
+    justify-content:center;
+    margin:auto;
+
+}
+
+.about-header{
+  display:flex;
+  font-size: 3rem;
+  margin-top: 2rem;
+}
+.about-section h2{
+  margin-top: 3.5rem!important;
+}
+.box img{
+    border-radius: 5px;
+}
+
+.box{
+    /* border:2px solid red; */
+    justify-content:center;
+    margin:auto;
+    /* box-sizing:border-box; */
+    position:relative;
+    width:200px;
+    height:200px;
+    transform-style:preserve-3d;
+    animation: animate 20s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform:perspective(9000px) rotateY(0deg);
+    }
+    100%{
+        transform:perspective(9000px) rotateY(360deg);
+    }
+}
+.box span{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    transform-origin:center;
+    transform-style:preserve-3d;
+    transform:rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+    -webkit-box-reflect:below 0px linear-gradient(transparent,transparent,#0004);
+}
+.box span img{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+}
+
+.glowing{
+
+    position:relative;
+
+}
+.glowing span{
+    position:absolute;
+    top:calc(80px * var(--i));
+    left:calc(80px * var(--i));
+    bottom:calc(80px * var(--i));
+    right:calc(80px * var(--i));
+}
+.glowing span:before{
+    content:'';
+    position:absolute;
+    top:50%;
+    left:-8px;
+    width:15px;
+    height:15px;
+    background:#f00;
+    border-radius:50%;
+}
+.glowing span:nth-child(3n + 1):before{
+    background:rgba(134,255,0,1);
+    box-shadow:0 0 20px rgba(134,255,0,1),
+                0 0 40px rgba(134,255,0,1),
+                0 0 60px rgba(134,255,0,1),
+                0 0 80px rgba(134,255,0,1),
+                0 0 0 8px rgba(134,255,0,.1);
+}
+.glowing span:nth-child(3n + 2):before{
+    background:rgba(255,255,0,1);
+    box-shadow:0 0 20px rgba(255,214,0,1),
+                0 0 40px rgba(255,214,0,1),
+                0 0 60px rgba(255,214,0,1),
+                0 0 80px rgba(255,214,0,1),
+                0 0 0 8px rgba(255,214,0,.1);
+}
+.glowing span:nth-child(3n + 3):before{
+    background:rgba(0,226,255,1);
+    box-shadow:0 0 20px rgba(0,226,225,1),
+                0 0 40px rgba(0,226,225,1),
+                0 0 60px rgba(255,214,0,1),
+                0 0 80px rgba(0,226,225,1),
+                0 0 0 8px rgba(0,226,225,.1);
+}
+.glowing span:nth-child(3n + 1){
+    animation:ani 10s alternate infinite;
+}
+.glowing span:nth-child(3n + 2){
+    animation:ani-reverse 3s alternate infinite;
+}
+.glowing span:nth-child(3n + 3){
+    animation:ani 8s alternate infinite;
+}
+@keyframes ani{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes ani-reverse{
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+.clearfix{
+    color:white!important;
+}
+.contact-header h2{
+           margin-top: 1.5rem!important;
+	
+}
+
+	@media(max-width:280px){
+        .html{
+            margin-top:90%;
+            
+        }
+         
+        
+       .about-header .about-text p{
+     font-size: 0.5rem!important;
+
+  
+     }
+}
+	@media(max-width:360px){
+    
+        .html{
+            margin-top:500px!important;
+        }
+     
+       .about-header .about-text p{
+     font-size: 1rem!important;
+       }
+}
+	
+	@media(max-width:480px){
+     
+          .html{
+				margin-top:70%;
+				
+			}
+        	
+        .about-header .about-text p{
+     font-size: 1.5rem!important;
+        	
+    }
+}
+@media(max-width:540px){
+   
+          .html{
+				margin-top:70%;
+				
+			}
+       
+         .about-header .about-text p{
+     font-size: 1.5rem!important;
+        	
+    }
+}
+@media(max-width:600px){
+    .html{
+        margin-top:65%!important;
+        
+    }
+ 
+
+}
+@media(max-width:1024px){
+            .html{
+				margin-top:35%!important;
+				
+			}
+      
+        
+        .works-station{
+            margin-bottom:0px!important;
+        }
+       
+        
+
+  }
+       
+ @media(max-width:1201px){
+              .html{
+				margin-top:70%!important;  
+				
+			}
+ }
