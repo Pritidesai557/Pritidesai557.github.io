@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/aa10df8604.js" crossorigin="anonymous"></script>
+
+    <!-- chart** -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <title>AdminSite</title>
+    <style>
+        .back.back-change {
+            width: 91px;
+            height: 91px;
+            background: white;
+            overflow: hidden;
+            cursor: pointer;
+            border-radius: 23px;
+            margin: 3px;
+            border-color: red;
+        }
+
+        .back .back-change img {
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            padding: 5px;
+            border-radius: 15px;
+        }
+
+        .modal-body .back {
+            width:5rem;
+            height:5rem;
+            background: white;
+            border-radius: 23px;
+            /* position: fixed; */
+            display: flex;
+            /* bottom: 10px; */
+            justify-content: space-around;
+            align-items: center;
+            margin-left: 15%;
+        }
+    </style>
+</head>
+
+<body class="body">
+
+    <!-- SIDEBAR -->
+    <section id="sidebar"
+        style="background-image:linear-gradient(rgba(0, 0, 0, 0.5)100%,rgba(0, 0, 0, 0.5)100%), url(images/rockstar.jpeg);background-size: cover;">
+        <ul class="side-menu">
+            <a href="#" class="brand"
+                style="background-image:linear-gradient(rgba(0,0,0,0.5)100%,rgba(0,0,0,0.5)100%), url(images/rockstar.jpeg);"
+                id="change"><i class='bx bxs-smile icon' style="font-size:x-large;"></i> Admin</a>
+            <hr style="color: antiquewhite;">
+            <li>
+                <a href="#"><i class='bx bxs-user-circle icon' style="font-size:x-large;"></i> Name <i
+                        class='bx bx-chevron-right icon-right'></i></a>
+                <ul class="side-dropdown">
+                    <li><a href="#">My Profile</a></li>
+                    <li><a href="#">Edit Profile</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </li>
+            <hr style="color: antiquewhite;">
+            <li style=" margin-top: 15px;"><a href="#" class="active"><i class='bx bxs-dashboard icon'
+                        style="font-size:x-large;"></i>
+                    Dashboard</a></li>
+            <!-- <li class="divider" data-text=""></li> -->
+            <li>
+                <a href="#"><i class='bx bxs-message-square-dots icon' style="font-size:x-large;"></i> COMPONENTS <i
+                        class='bx bx-chevron-right icon-right'></i></a>
+                <ul class="side-dropdown">
+                    <li><a href="#">Buttons</a></li>
+                    <li><a href="#">Grid System</a></li>
+                    <li><a href="#">Panels</a></li>
+                    <li><a href="#">Sweet Alert</a></li>
+                    <li><a href="#">Notifivations</a></li>
+                    <li><a href="#">Icons</a></li>
+                    <li><a href="#">Typography</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><i class='bx bxs-inbox icon' style="font-size:x-large;"></i> Forms <i
+                        class='bx bx-chevron-right icon-right'></i></a>
+                <ul class="side-dropdown">
+                    <li><a href="#">Regular Form</a></li>
+                    <li><a href="#">Extended Form</a></li>
+                    <li><a href="#">Validation Form</a></li>
+                    <li><a href="#">Wizard</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><i class='bx bx-table icon' style="font-size:x-large;"></i> TABLES <i
+                        class='bx bx-chevron-right icon-right'></i></a>
+                <ul class="side-dropdown">
+                    <li><a href="#">Regular Tables</a></li>
+                    <li><a href="#">Extended Tables</a></li>
+                    <li><a href="#">Paginated Tables</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><i class='bx bxs-map icon' style="font-size:x-large;"></i> MAPS <i
+                        class='bx bx-chevron-right icon-right'></i></a>
+                <ul class="side-dropdown">
+                    <li><a href="#">Google Maps</a></li>
+                    <li><a href="#">Full Screen Maps</a></li>
+                    <li><a href="#">Vector Maps</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#"><i class='bx bxs-chart icon' style="font-size:x-large;"></i> CHARTS</a></li>
+            <li><a href="#"><i class='bx bxs-notepad icon' style="font-size:x-large;"></i> CALANDER</a></li>
+            <li><a href="#"><i class='bx bxs-notepad icon' style="font-size:x-large;"></i> PAGES</a></li>
+        </ul>
+    </section>
+    <!-- SIDEBAR -->
+
+    <!-- NAVBAR -->
+    <section id="content">
+        <!-- NAVBAR -->
+        <nav>
+            <i class='bx bx-menu toggle-sidebar'></i>
+            <form action="#">
+                <div class="form-group">
+                    <input type="text" placeholder="Search...">
+                    <i class='bx bx-search icon'></i>
+                </div>
+            </form>
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-globe" style="color: gray;"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-bell" style="color: gray;"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-bars" style="color: gray;"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </li>
+        </nav>
+        <!-- NAVBAR -->
+        <!-- MAIN -->
+        <main style="background-color: whitesmoke;">
+            <div class="settings">
+                <li class="nav-item dropdown">
+                    <a class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <i class="bx bxs-cog"></i>
+                    </a>
+                </li>
+            </div>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Remove Background Image <button class="btn" onclick="remimg()"
+                                    style="border-color:blue;"></button></p>
+                            <p>Sidebar Mini <button class="btn" onclick="remimg()" style="border-color:blue;"></button>
+                            </p>
+                            <p style="display: flex; align-items: center;">
+                                Filters<button class="btn" onclick="green()"
+                                    style="background-color: rgba(7, 250, 28, 0.5); border-radius: 50px!important; padding: 11px;"></button>
+                                <button class="btn" onclick="red()"
+                                    style="background-color: rgba(244, 159, 62, 0.5);border-radius: 50px!important; padding: 11px;"></button>
+                                <button class="btn" onclick="darkblue()"
+                                    style="background-color: rgba(76, 47, 193, 0.5);border-radius: 50px!important; padding: 11px;"></button>
+                                <button class="btn" onclick="purple()"
+                                    style="background-color: rgba(248, 120, 242, 0.5);border-radius: 50px!important; padding: 11px;"></button>
+                                <button class="btn" onclick="orange()"
+                                    style="background-color: rgba(37, 177, 252, 0.5);border-radius: 50px!important; padding: 11px;"></button>
+                                <button class="btn" onclick="defaultc()"
+                                    style="background-color: rgba(0, 0, 0, 0.5);border-radius: 50px!important; padding: 11px;"></button>
+                            </p>
+                            Sidebar Images
+                            <div class="back">
+                                <div class="back-change" onclick="background3()"><img src="images/content.jpeg" style="background-size: cover" alt=""></div>
+                                <div class="back-change" onclick="background2()"><img src="images/river.jpeg" style="background-size: cover" alt=""></div>
+                                <div class="back-change" onclick="background3()"><img src="images/rockriver.jpeg" style="background-size: cover" alt=""></div>
+                            </div>
+                            <script>
+                                function remimg() {
+                                    document.getElementById("sidebar").style.backgroundImage = "none"
+                                    document.getElementById("change").style.backgroundImage = "none"
+                                }
+                                function green() {
+                                    document.getElementById("sidebar").style.backgroundImage = "linear-gradient(rgba(7, 250, 28, 0.5)100%,rgba(7, 250, 28, 0.5)100%), url(images/rockstar.jpeg)"
+                                    document.getElementById("change").style.backgroundImage = "linear-gradient(rgba(7, 250, 28, 0.5)100%,rgba(7, 250, 28, 0.5)100%), url(images/rockstar.jpeg)"
+                                }
+                                function red() {
+                                    document.getElementById("sidebar").style.backgroundImage = "linear-gradient(rgba(244, 62, 62, 0.5)100%,rgba(244, 62, 62, 0.5)100%), url(images/rockstar.jpeg)"
+                                    document.getElementById("change").style.backgroundImage = "linear-gradient(rgba(244, 62, 62, 0.5)100%,rgba(244, 62, 62, 0.5)100%), url(images/rockstar.jpeg)"
+                                }
+                                function darkblue() {
+                                    document.getElementById("sidebar").style.backgroundImage = "linear-gradient(rgba(76, 47, 193, 0.5)100%,rgba(76, 47, 193, 0.5)100%), url(images/rockstar.jpeg)"
+                                    document.getElementById("change").style.backgroundImage = "linear-gradient(rgba(76, 47, 193, 0.5)100%,rgba(76, 47, 193, 0.5)100%), url(images/rockstar.jpeg)"
+                                }
+                                function purple() {
+                                    document.getElementById("sidebar").style.backgroundImage = "linear-gradient(rgba(183, 121, 40, 0.5)100%,rgba(183, 121, 40, 0.5)100%), url(images/rockstar.jpeg)"
+                                    document.getElementById("change").style.backgroundImage = "linear-gradient(rgba(183, 121, 40, 0.5)100%,rgba(183, 121, 40, 0.5)100%), url(images/rockstar.jpeg)"
+                                }
+                                function orange() {
+                                    document.getElementById("sidebar").style.backgroundImage = "linear-gradient(rgba(37, 177, 252, 0.5)100%,rgba(37, 177, 252, 0.5)100%), url(images/rockstar.jpeg)"
+                                    document.getElementById("change").style.backgroundImage = "linear-gradient(rgba(37, 177, 252, 0.5)100%,rgba(37, 177, 252, 0.5)100%), url(images/rockstar.jpeg)"
+                                }
+                                function defaultc() {
+                                    document.getElementById("sidebar").style.backgroundImage = "linear-gradient(rgba(0,0,0,0.5)100%,rgba(0,0,0,0.5)100%), url(images/rockstar.jpeg)"
+                                    document.getElementById("change").style.backgroundImage = "linear-gradient(rgba(0,0,0,0.5)100%,rgba(0,0,0,0.5)100%), url(images/rockstar.jpeg)"
+                                }
+                                function background1() {
+                                    document.querySelector('section').style.background = "linear-gradient(rgba(0,0,0,0.5)100%,rgba(0,0,0,0.5)100%),url('images/content.jpeg') "
+                                }
+                                function background2() {
+                                    document.querySelector('section').style.background = "linear-gradient(rgba(0,0,0,0.5)100%,rgba(0,0,0,0.5)100%),url('images/river.jpeg') "
+                                }
+                                function background3() {
+                                    document.querySelector('section').style.background = "linear-gradient(rgba(0,0,0,0.5)100%,rgba(0,0,0,0.5)100%),url('images/rockriver.jpeg') "
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info-data">
+
+                <div class="card">
+                    <div class="head">
+                        <div>
+                            <p>Numbers</p>
+                            <h2>150GB</h2>
+                        </div>
+                        <i class='bx bx-loader-circle icon' style="color: orange;"></i>
+
+                    </div>
+                    <span class="progress" data-value="100%"></span>
+                    <span class="label"><i class='bx bx-refresh icon'>Update now</i></span>
+                </div>
+                <div class="card">
+                    <div class="head">
+                        <div>
+                            <p>Revenue</p>
+                            <h2>$1,234</h2>
+
+                        </div>
+                        <i class='bx bx-money icon'></i>
+                    </div>
+                    <span class="progress" data-value="100%"></span>
+                    <span class="label"><i class='bx bx-table'>Last day</i></span>
+                </div>
+                <div class="card">
+                    <div class="head">
+                        <div>
+                            <p>Errors</p>
+                            <h2>23</h2>
+                        </div>
+                        <i class='bx bx-error icon' style="color:red;"></i>
+                    </div>
+                    <span class="progress" data-value="100%"></span>
+                    <span class="label"><i class='bx bx-time icon'>Last day</i></span>
+                </div>
+
+                <div class="card">
+                    <div class="head">
+                        <div>
+                            <p>Followers</p>
+                            <h2>+45K</h2>
+                        </div>
+                        <i class='bx bx-heart icon' style="color: blue;"></i>
+                    </div>
+                    <span class="progress" data-value="100%"></span>
+                    <span class="label"><i class='bx bx-refresh icon'>Update now</i></span>
+                </div>
+
+            </div>
+            <div class="data">
+                <div class="content-data">
+                    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+                    <script>
+                        const xValues = ["Open", "Bounce", "Unsubscribe"];
+                        const yValues = [20, 40, 40];
+                        const barColors = [
+                            "#b91d47",
+                            "#00aba9",
+                            "#1e7145"
+                        ];
+
+                        new Chart("myChart", {
+                            type: "pie",
+                            data: {
+                                labels: xValues,
+                                datasets: [{
+                                    backgroundColor: barColors,
+                                    data: yValues
+                                }]
+                            },
+                            options: {
+                                title: {
+                                    display: true,
+                                    text: "World Wide Wine Production 2018"
+                                }
+                            }
+                        });
+                    </script>
+                </div>
+                <div class="content-data">
+                    <!-- <div id="chart_div"></div> -->
+                    <canvas id="myChart2" style="width:100%;max-width:600px"></canvas>
+                    <script>
+                        const xValue = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000];
+
+                        new Chart("myChart2", {
+                            type: "line",
+                            data: {
+                                labels: xValue,
+                                datasets: [{
+                                    data: [860, 1140, 1060, 1060, 1070, 1110, 1330, 2210, 2230, 4478],
+                                    borderColor: "red",
+                                    fill: false
+                                }, {
+                                    data: [1600, 1700, 1700, 1900, 2000, 2700, 3000, 4000, 4400, 4800],
+                                    borderColor: "green",
+                                    fill: false
+                                }, {
+                                    data: [2000, 2500, 3000, 3100, 3200, 3300, 3400, 4400, 4500, 5000],
+                                    borderColor: "blue",
+                                    fill: false
+                                }]
+                            },
+                            options: {
+                                legend: { display: false }
+                            }
+                        });
+                    </script>
+
+
+                </div>
+            </div>
+            <div class="data">
+                <div class="content-data" style="width: 500px;">
+                    <div id="dual_x_div" style="width: 900px; height: 500px;"></div>
+                    <script>
+                        google.charts.load('current', { 'packages': ['bar'] });
+                        google.charts.setOnLoadCallback(drawStuff);
+
+                        function drawStuff() {
+                            var data = new google.visualization.arrayToDataTable([
+                                ['', 'Tesla', 'BMW'],
+                                ['Jan', 8000, 23.13],
+                                ['Feb', 24000, 4.5],
+                                ['Mar', 30000, 14.3],
+                                ['Apr', 50000, 10.9],
+                                ['May', 60000, 13.1],
+                                ['Jun', 60000, 12.1],
+                                ['Jul', 60000, 13.11],
+                                ['Aug', 60000, 13.10],
+                                ['Sep', 60000, 11.11],
+                                ['Oct', 60000, 19.12],
+                                ['Nov', 60000, 21.24],
+                                ['Dec', 60000, 15.19]
+                            ]);
+
+                            var options = {
+                                width: 482,
+                                chart: {
+                                    title: '2014 Sales',
+                                    subtitle: 'All products including Taxes'
+                                },
+                                bars: 'vertical', // Required for Material Bar Charts.
+                                series: {
+                                    0: { axis: 'Tesla' }, // Bind series 0 to an axis named 'distance'.
+                                    1: { axis: 'BMW' } // Bind series 1 to an axis named 'brightness'.
+                                },
+                                axes: {
+                                    x: {
+                                        distance: { label: 'parsecs' }, // Bottom x-axis.
+                                        brightness: { side: 'top', label: 'apparent magnitude' } // Top x-axis.
+                                    }
+                                }
+                            };
+
+                            var chart = new google.charts.Bar(document.getElementById('dual_x_div'));
+                            chart.draw(data, options);
+                        };
+                    </script>
+                </div>
+                <div class="content-data">
+                    <h3>Tasks</h3>
+                    <p>Backend development</p>
+                    <hr style="margin-top: 5px;">
+                    <table>
+                        <th></th>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>Sign contract for "What are conference organizers afraid of?"</td>
+                                <td class="td-actions d-flex justify-content-end">
+                                    <div class="btn btn-simple btn-link has-tooltip" data-original-title="null">
+                                        <i class="fa fa-edit"></i>
+                                    </div>
+                                    <div class="btn btn-simple btn-link has-tooltip" data-original-title="null">
+                                        <i class="fa fa-times"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>Sign contract for "What are conference organizers afraid of?"</td>
+                                <td class="td-actions d-flex justify-content-end">
+                                    <div class="btn btn-simple btn-link has-tooltip" data-original-title="null">
+                                        <i class="fa fa-edit"></i>
+                                    </div>
+                                    <div class="btn btn-simple btn-link has-tooltip" data-original-title="null">
+                                        <i class="fa fa-times"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>Sign contract for "What are conference organizers afraid of?"</td>
+                                <td class="td-actions d-flex justify-content-end">
+                                    <div class="btn btn-simple btn-link has-tooltip" data-original-title="null">
+                                        <i class="fa fa-edit"></i>
+                                    </div>
+                                    <div class="btn btn-simple btn-link has-tooltip" data-original-title="null">
+                                        <i class="fa fa-times"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>Sign contract for "What are conference organizers afraid of?"</td>
+                                <td class="td-actions d-flex justify-content-end">
+                                    <div class="btn btn-simple btn-link has-tooltip" data-original-title="null">
+                                        <i class="fa fa-edit"></i>
+                                    </div>
+                                    <div class="btn btn-simple btn-link has-tooltip" data-original-title="null">
+                                        <i class="fa fa-times"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>Sign contract for "What are conference organizers afraid of?"</td>
+                                <td class="td-actions d-flex justify-content-end">
+                                    <div class="btn btn-simple btn-link has-tooltip" data-original-title="null">
+                                        <i class="fa fa-edit"></i>
+                                    </div>
+                                    <div class="btn btn-simple btn-link has-tooltip" data-original-title="null">
+                                        <i class="fa fa-times"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>Sign contract for "What are conference organizers afraid of?"</td>
+                                <td class="td-actions d-flex justify-content-end">
+                                    <div class="btn btn-simple btn-link has-tooltip" data-original-title="null">
+                                        <i class="fa fa-edit"></i>
+                                    </div>
+                                    <div class="btn btn-simple btn-link has-tooltip" data-original-title="null">
+                                        <i class="fa fa-times"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </main>
+        <!-- MAIN -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <h6>Dashboard<span style="text-align: right;float: right;">
+                            &copy; Coded with <i class="fa-regular fa-heart fa-beat" style="color: red;"></i> by Priti
+                            Desai
+                        </span></h6>
+                </div>
+        </footer>
+    </section>
+    <!-- NAVBAR -->
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
