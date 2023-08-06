@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
@@ -159,14 +160,20 @@
             </div>
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
-                <div class="modal-dialog">
+                <div class="modal-dialog modal-sm">
                     <div class="modal-content">
-                        <div class="modal-body">
-                            <p>Remove Background Image <button class="btn" onclick="remimg()"
-                                    style="border-color:blue;"></button></p>
-                            <p>Sidebar Mini <button class="btn" onclick="remimg()" style="border-color:blue;"></button>
-                            </p>
-                            <p style="display: flex; align-items: center;">
+                        <div class="modal-body" style="padding: 10px;">
+                            <p>                            Background Image
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                  </label></p>
+                            <p> Sidebar Mini                           
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                  </label></p>
+                            <p style=" align-items: center;">
                                 Filters<button class="btn" onclick="green()"
                                     style="background-color: rgba(7, 250, 28, 0.5); border-radius: 50px!important; padding: 11px;"></button>
                                 <button class="btn" onclick="red()"
@@ -181,14 +188,14 @@
                                     style="background-color: rgba(0, 0, 0, 0.5);border-radius: 50px!important; padding: 11px;"></button>
                             </p>
                             Sidebar Images
-                            <div class="back">
-                                <div class="back-change" onclick="background1()"><img src="images/content.jpeg"
-                                        style="background-size: cover" alt=""></div>
-                                <div class="back-change" onclick="background2()"><img src="images/river.jpeg"
-                                        style="background-size: cover" alt=""></div>
-                                <div class="back-change" onclick="background3()"><img src="images/rockriver.jpeg"
-                                        style="background-size: cover" alt=""></div>
-                            </div>
+                            <p class="back" style="align-items: center;">
+                                <button class="back-change" onclick="background1()"><img src="images/content.jpeg"
+                                        style="background-size: cover" alt=""></button>
+                                <button class="back-change" onclick="background2()"><img src="images/river.jpeg"
+                                        style="background-size: cover" alt=""></button>
+                                <button class="back-change" onclick="background3()"><img src="images/rockriver.jpeg"
+                                        style="background-size: cover" alt=""></button>
+                            </p>
                             <script>
                                 function remimg() {
                                     document.getElementById("sidebar").style.backgroundImage = "none"
