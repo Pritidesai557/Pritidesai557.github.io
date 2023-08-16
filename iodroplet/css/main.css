@@ -227,7 +227,6 @@ li {
 	top: 0;
 	left: 0;
 	height: 100%;
-	/* height: fit-content; */
 	overflow-y: auto;
 	scrollbar-width: none;
 	transition: all .3s ease;
