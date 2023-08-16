@@ -345,14 +345,16 @@ li {
 	align-items: center;
 	padding: 12px 0;
 	color: var(--light);
-	background: var(--blue);
+	/* background: var(--blue); */
+	background: #6c757d;
 	transition: all .3s ease;
 	border-radius: 5px;
 	font-weight: 600;
 	margin-bottom: 12px;
 }
 #sidebar .btn-upgrade:hover {
-	background: var(--dark-blue);
+	/* background: var(--dark-blue); */
+	background: #6c757d;
 }
 #sidebar .ads .wrapper p {
 	font-size: 12px;
