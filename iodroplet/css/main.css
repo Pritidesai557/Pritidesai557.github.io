@@ -297,7 +297,9 @@ li {
 	white-space: nowrap;
 }
 #sidebar .side-menu > li > a:hover {
-	background: var(--blue);
+	/* background: var(--blue); */
+	background: #6c757d;
+
 }
 #sidebar .side-menu > li > a.active .icon-right {
 	transform: rotateZ(90deg);
@@ -305,7 +307,7 @@ li {
 #sidebar .side-menu > li > a.active,
 #sidebar .side-menu > li > a.active:hover {
 	/* background: var(--blue); */
-	background: #6c757d;;
+	background: #6c757d;
 	color: var(--light);
 }
 #sidebar .side-dropdown {
