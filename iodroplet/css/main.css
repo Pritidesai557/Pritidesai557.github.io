@@ -585,12 +585,6 @@ main .data .content-data {
 
 /* MAIN */
 /* CONTENT */
-
-
-
-
-
-
 @media screen and (max-width: 768px) {
 	#content {
 		position: relative;
