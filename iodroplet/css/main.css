@@ -603,11 +603,14 @@ main .data .content-data {
 		display: none;
 	}
 } */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 412px) {
 	#content {
 		position: relative;
-		width: calc(100% - 550px);
+		width: calc(100% - 260px);
 		transition: all .3s ease;
+	}
+	#sidebar.hide {
+		max-width: 0px!important;
 	}
 	nav .nav-link,
 	nav .divider {
