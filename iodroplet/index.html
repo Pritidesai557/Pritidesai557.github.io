@@ -295,7 +295,8 @@
 
             </div>
             <div class="data">
-                <div class="content-data">
+                <div class="content-data"><strong> <center>Email Statistics<center></strong>
+                    <p><center style="color: grey;"> Last Campaign Performance</center></p>
                     <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
                     <script>
                         const xValues = ["Open", "Bounce", "Unsubscribe"];
@@ -318,14 +319,19 @@
                             options: {
                                 title: {
                                     display: true,
-                                    text: "World Wide Wine Production 2018"
+                                    text: ""
+                                   
                                 }
                             }
                         });
                     </script>
+                    <span class="progress" data-value="100%" style="height:1px;margin-top: 8px;"></span>
+                    <strong><center><i class='bx bx-time icon' style="color: gray;margin-top: 1rem;"> Campaign sent 2 days ago</i></center></strong>
                 </div>
                 <div class="content-data">
                     <!-- <div id="chart_div"></div> -->
+                   <strong> Users Behavior</strong>
+                   <p style="color: grey;">24 Hours performance</p>
                     <canvas id="myChart2" style="width:100%;max-width:600px"></canvas>
                     <script>
                         const xValue = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000];
@@ -349,12 +355,17 @@
                                 }]
                             },
                             options: {
-                                legend: { display: false }
+                                legend: { display: false },
+                                title: {
+                                    display: true,
+                                    text: ""
+                                   
+                                }
                             }
                         });
                     </script>
-
-
+                  <span class="progress" data-value="100%" style="height:1px;margin-top: 8px;"></span>
+                    <strong><center><i class='bx bx-refresh icon' style="color: gray;margin-top: 1rem;"> Updated 3 minutes ago</i></center></strong>
                 </div>
             </div>
             <div class="data">
@@ -366,7 +377,7 @@
 
                         function drawStuff() {
                             var data = new google.visualization.arrayToDataTable([
-                                ['', 'Tesla', 'BMW'],
+                                ['', 'Tesla Model S', 'BMW 5 Series'],
                                 ['Jan', 8000, 23.13],
                                 ['Feb', 24000, 4.5],
                                 ['Mar', 30000, 14.3],
@@ -389,8 +400,8 @@
                                 },
                                 bars: 'vertical', // Required for Material Bar Charts.
                                 series: {
-                                    0: { axis: 'Tesla' }, // Bind series 0 to an axis named 'distance'.
-                                    1: { axis: 'BMW' } // Bind series 1 to an axis named 'brightness'.
+                                    0: { axis: 'Tesla Model S' }, // Bind series 0 to an axis named 'distance'.
+                                    1: { axis: 'BMW 5 Series' } // Bind series 1 to an axis named 'brightness'.
                                 },
                                 axes: {
                                     x: {
@@ -404,11 +415,13 @@
                             chart.draw(data, options);
                         };
                     </script>
+                    <span class="progress" data-value="100%"  style="height:1px;margin-top: 8px;"></span>
+                     <strong><i class='bx bx-refresh icon' style="color: gray; margin-top: 1rem;">  Data information certified</i></strong>
                 </div>
                 <div class="content-data">
                     <h3>Tasks</h3>
-                    <p>Backend development</p>
-                    <hr style="margin-top: 5px;">
+                    <p style="color: grey;">Backend development</p>
+                    <!-- <hr style="margin-top: 5px;"> -->
                     <table>
                         <th></th>
                         <tbody>
@@ -486,14 +499,16 @@
                             </tr>
                         </tbody>
                     </table>
+                    <span class="progress" data-value="100%" style="height:1px;margin-top: 8px;"></span>
+                    <strong><i class='bx bx-refresh icon' style="color: gray;margin-top: 1rem;"> Updated 3 minutes ago</i></strong>
                 </div>
             </div>
 
         </main>
         <!-- MAIN -->
         <footer>
-            <div class="container">
-                <div class="row">
+            <div class="container" style="background-color: #fff;">
+                <div class="row" style="padding:1rem;">
                     <h6>Dashboard<span style="text-align: right;float: right;">
                             &copy; Coded with <i class="fa-regular fa-heart fa-beat" style="color: red;"></i> by Priti
                             Desai

@@ -38,7 +38,7 @@ table td{
     text-decoration: none;
 }
 footer{
-    padding-top: 10px;
+    padding-top: 5px;
 }
 hr{
     margin: 0px!important;
@@ -123,11 +123,12 @@ main{
 	height: 0;
   }
   input:checked + .slider {
-	background-color: #2196F3;
+	background-color: #6c757d;
   }
   
   input:focus + .slider {
-	box-shadow: 0 0 1px #2196F3;
+	box-shadow: 0 0 1px #6c757d;
+	;
   }
   
   input:checked + .slider:before {
@@ -416,7 +417,8 @@ nav .form-group input {
 	transition: all .3s ease;
 }
 nav .form-group input:focus {
-	box-shadow: 0 0 0 1px var(--blue), 0 0 0 4px var(--light-blue);
+	box-shadow: 0 0 0 1px #6c757d
+	, 0 0 0 4px #6c757d;
 }
 nav .form-group .icon {
 	position: absolute;
@@ -495,7 +497,7 @@ nav .profile .profile-link a:hover {
 /* MAIN */
 main {
 	width: 100%;
-	padding: 24px 20px 20px 20px;
+	padding: 0px 15px 15px 15px;
 }
 main .title {
 	font-size: 28px;
@@ -519,7 +521,7 @@ main .breadcrumbs li.divider {
 	pointer-events: none;
 }
 main .info-data {
-	margin-top: 36px;
+	margin-top: 6px;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 	grid-gap: 20px;
