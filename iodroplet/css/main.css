@@ -226,8 +226,8 @@ li {
 	background: var(--dark);
 	top: 0;
 	left: 0;
-	/* height: 100%; */
-	height: fit-content;
+	height: 100%;
+	/* height: fit-content; */
 	overflow-y: auto;
 	scrollbar-width: none;
 	transition: all .3s ease;
@@ -592,7 +592,7 @@ main .data .content-data {
 
 
 
-/* @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
 	#content {
 		position: relative;
 		width: calc(100% - 60px);
@@ -601,22 +601,5 @@ main .data .content-data {
 	nav .nav-link,
 	nav .divider {
 		display: none;
-	}
-} */
-@media screen and (max-width: 412px) {
-	#content {
-		position: relative;
-		width: calc(100% - 260px);
-		transition: all .3s ease;
-	}
-	#sidebar.hide {
-		max-width: 0px!important;
-	}
-	nav .nav-link,
-	nav .divider {
-		display: none;
-	}
-	body{
-		width: fit-content;
 	}
 }
