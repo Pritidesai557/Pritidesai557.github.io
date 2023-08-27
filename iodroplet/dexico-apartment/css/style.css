@@ -342,16 +342,7 @@ li{
   } */
 
   /* *****  side toggle  ******* */
-  .gm-style{
-    position: absolute;
-    z-index: 0;
-    left: 0px;
-    top: 0px;
-    height: 100%;
-    width: 100%;
-    padding: 0px;
-    border-width: 0px;
-    margin: 0px;
-    background: url();
-    font: 400 11px Roboto, Arial, sans-serif;
-  }
+  .nav-link{
+    padding-right: 20px;
+    padding-left: 20px;
+}
