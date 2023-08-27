@@ -56,13 +56,29 @@ body{
     width: 100%;
 }
 .overlay-h {
-    font-weight: bold;
     width: 70%;
     position: absolute;
     top: 13%;
     left: 15%;
+    font-family: sans-serif;
     color:#133b5c;
-    font-size: 3rem;
+    font-size: 80px;
+    line-height: 1.2em;
+    font-weight: 800;
+    animation: moveh 3s forwards;
+    -webkit-animation: moveh 3s forwards;
+}
+.overlay-h2 {
+    font-weight: bold;
+    width: 70%;
+    position: absolute;
+    top: 22%;
+    left: 15%;
+    font-family: sans-serif;
+    color:#133b5c;
+    font-size: 80px;
+    line-height: 1.2em;
+    font-weight: 800;
     animation: moveh 3s forwards;
     -webkit-animation: moveh 3s forwards;
 }
@@ -309,5 +325,33 @@ label{
 li{
     list-style-type: none;
 }
+/* *********nav bar************** */
+.dropdown-toggle::after {
+    content: none;
+}
+  
+  .dropdown:hover>.dropdown-menu {
+    display: block;
+  }
+.dropdown-item:hover{
+    background-color: #3c6e71;
+  }
+  /*Without this, clicking will make it sticky*/
+  /* .dropdown>.dropdown-toggle:active {
+      pointer-events: none;
+  } */
 
-
+  /* *****  side toggle  ******* */
+  .gm-style{
+    position: absolute;
+    z-index: 0;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    border-width: 0px;
+    margin: 0px;
+    background: url();
+    font: 400 11px Roboto, Arial, sans-serif;
+  }
