@@ -324,6 +324,7 @@ label{
 }
 li{
     list-style-type: none;
+    padding-bottom: 10px;
 }
 /* *********nav bar************** */
 .dropdown-toggle::after {
@@ -348,4 +349,12 @@ li{
 }
 .nav{
     padding-left: 10%;
+}
+/* ***********contact page************ */
+.cont-h{
+    font-family:Sans-serif;
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 1.2em;
+    color:#133b5c ;
 }
