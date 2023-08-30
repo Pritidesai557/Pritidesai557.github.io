@@ -358,3 +358,15 @@ li{
     line-height: 1.2em;
     color:#133b5c ;
 }
+
+.gr2{
+    font-size: 16px;
+    line-height: 1em;
+    margin-top: 18px;
+}
+.elmf{
+    float: left; 
+    text-align: center;
+    padding: 0px 10px 0px 0px;
+    text-align: left;
+}
