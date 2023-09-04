@@ -396,3 +396,12 @@ li{
     position: relative;
     
 }
+.oops_img{
+    background-image: url(https://dexico.templatekit.co/wp-content/uploads/sites/26/2020/09/retro-grey-living-room-interior.jpg);
+    height: 100vh;
+}
+.back_overlay{
+    background-color: #FFFFFF;
+    opacity: 0.8;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
